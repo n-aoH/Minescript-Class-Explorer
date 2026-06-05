@@ -425,6 +425,7 @@ if sys.argv[1] == "download":
         f.write(response.text)
 
     print(f"Successfully downloaded!")
+    print("Use '\\vscode auto' to generate the autocomplete file.")
     exit()
 
 
