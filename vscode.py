@@ -14,7 +14,12 @@ except:
 URL = "https://raw.githubusercontent.com/n-aoH/Minescript-Class-Explorer/main/ClassList/classes.json"
 FOLDER = "VS ClassList"
 FILE_PATH = os.path.join(FOLDER, "classes.json")
-os.makedirs(FOLDER, exist_ok=True)
+try:
+    os.makedirs(FOLDER, exist_ok=False)
+    if len(sys.argv) < 2:
+        print("Thanks for installing! Download classes to use autocomplete with '\\vscode download'")
+except:
+    pass
 classes: list = []
 def auto():
     global classes
